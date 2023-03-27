@@ -19,3 +19,8 @@ function createGallery(galleryItems) {
 const test = createGallery(galleryItems);
 ulGal.insertAdjacentHTML("afterbegin", test);
 console.log(galleryItems);
+
+let gallery = new SimpleLightbox(".gallery a", {
+  captions: true,
+  captionDelay: 250,
+});
