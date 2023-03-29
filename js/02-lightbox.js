@@ -9,7 +9,7 @@ function createGallery(galleryItems) {
       return `
        <li class="gallery__item">
    <a class="gallery__link" href="${preview}">
-      <img class="gallery__image" src="${preview}" alt="${description}" />
+      <img class="gallery__image" src="${original}" alt="${description}" />
    </a>
 </li>`;
     })
@@ -23,7 +23,5 @@ console.log(galleryItems);
 let gallery = new SimpleLightbox(".gallery a", {
   captions: true,
   captionDelay: 250,
-  captionsData: function (image) {
-    return image.querySelector("img").getAttribute("alt");
-  },
+  captionsData: "alt",
 });
